@@ -7,7 +7,7 @@ function Home() {
     <main style={styles.main}>
       <h1 style={styles.title}>Welcome to My Front-End Learning Journey</h1>
       <p style={styles.subtitle}>
-        Explore the topics below to see my progress learning HTML, CSS, JavaScript, and React.
+        Explore the topics below to see my progress learning HTML, CSS, JavaScript, React, and Material UI.
       </p>
 
       <div style={styles.cardContainer}>
@@ -29,6 +29,11 @@ function Home() {
         <Link to="/react" style={styles.card}>
           <h2>React</h2>
           <p>Build powerful UIs with React.</p>
+        </Link>
+
+        <Link to="/material" style={styles.card}>
+          <h2>Material UI</h2>
+          <p>Explore Material UI components and theming.</p>
         </Link>
       </div>
     </main>
@@ -67,10 +72,6 @@ const styles = {
     textDecoration: 'none',
     transition: 'transform 0.2s ease, box-shadow 0.2s ease',
   },
-  cardHover: {
-    transform: 'translateY(-5px)',
-    boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
-  }
 };
 
 export default Home;

@@ -36,6 +36,12 @@ function Navbar() {
       >
         React
       </NavLink>
+      <NavLink
+        to="/material"
+        className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+      >
+        Material UI
+      </NavLink>
     </nav>
   );
 }
