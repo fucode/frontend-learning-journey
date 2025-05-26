@@ -5,9 +5,9 @@ import './Home.css';
 function Home() {
   return (
     <main style={styles.main}>
-      <h1 style={styles.title}>Welcome to My Front-End Learning Journey</h1>
+      <h1 style={styles.title}>Faraz Uddin Coding Knowledge Base</h1>
       <p style={styles.subtitle}>
-      I created a React web page to chronicle my journey in learning Front-End Development. The aim is to develop and deploy a coding journal for personal educational purposes.
+        I built this React site to document my journey in mastering Front-End Development. It’s my personal coding journal for learning and growth.
       </p>
 
       <div style={styles.cardContainer}>
@@ -23,7 +23,7 @@ function Home() {
 
         <Link to="/javascript" style={styles.card}>
           <h2>JavaScript</h2>
-          <p>Add interactivity using JavaScript.</p>
+          <p>Add interactivity with JavaScript.</p>
         </Link>
 
         <Link to="/react" style={styles.card}>

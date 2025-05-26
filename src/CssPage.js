@@ -1,55 +1,201 @@
 import React from 'react';
 import './CSSPage.css';
 
-function CSSPage() {
+function CssPage() {
   return (
     <main style={styles.main}>
-      <h1 style={styles.title}>CSS in the Enterprise & Modern Frameworks</h1>
+      <h1 style={styles.title}>Understanding CSS</h1>
       <p style={styles.subtitle}>
-        Mastering CSS is essential for building scalable, maintainable, and AI-assisted front-end systems.
+        CSS brings style and visual appeal to web pages, making them engaging and user-friendly.
       </p>
 
       <section style={styles.section}>
-        <h2>1. Core CSS Concepts in the Enterprise</h2>
-        <ul>
-          <li><strong>Scalability:</strong> Use systems like BEM, CSS Modules, or Tailwind to enforce structure and reduce conflict.</li>
-          <li><strong>Maintainability:</strong> Break styles into component-based or utility-first patterns. Reuse variables and mixins consistently.</li>
-          <li><strong>Responsiveness:</strong> Use flexible layouts (Flexbox, Grid), breakpoints, and relative units (<code>em</code>, <code>rem</code>, <code>%</code>).</li>
-          <li><strong>Theming:</strong> Use CSS variables or preprocessors (Sass) to support dynamic themes like light/dark modes or client branding.</li>
-          <li><strong>Performance:</strong> Use critical CSS, avoid unused classes, and limit use of large or complex selectors.</li>
+        <h2>What is CSS?</h2>
+        <p>
+          CSS (Cascading Style Sheets) is a styling language used to control the appearance of HTML elements on a web page. It defines properties like colors, fonts, layouts, and spacing, allowing developers to separate a page’s structure (HTML) from its presentation. For example, CSS can make a heading blue, center a paragraph, or create a responsive grid layout.
+        </p>
+      </section>
+
+      <section style={styles.section}>
+        <h2>Why Was CSS Created?</h2>
+        <p>
+          CSS was created in 1996 by Håkon Wium Lie and Bert Bos to address the limitations of HTML for styling. Early HTML used tags like <code>&lt;font&gt;</code> and attributes like <code>bgcolor</code> for presentation, which made pages hard to maintain and inconsistent across browsers. CSS introduced a standardized way to apply styles, allowing developers to update a site’s look without changing its HTML structure.
+        </p>
+      </section>
+
+      <section style={styles.section}>
+        <h2>How CSS Helped Build the Internet</h2>
+        <p>
+          CSS transformed the internet by enabling:
+        </p>
+        <ul style={styles.list}>
+          <li><strong>Visual Consistency</strong>: CSS ensured uniform styling across pages, making websites look professional and cohesive.</li>
+          <li><strong>Separation of Concerns</strong>: By separating style (CSS) from structure (HTML), developers could maintain and update sites more easily.</li>
+          <li><strong>Creative Freedom</strong>: CSS allowed for diverse designs, from simple text styling to complex layouts, fueling the growth of visually rich websites.</li>
+          <li><strong>Browser Compatibility</strong>: Standardized CSS rules enabled browsers like Netscape and Internet Explorer to render styles consistently, encouraging widespread adoption.</li>
+        </ul>
+        <p>
+          CSS made the web more attractive and accessible, contributing to its growth as a platform for information, commerce, and creativity.
+        </p>
+      </section>
+
+      <section style={styles.section}>
+        <h2>Core CSS Concepts</h2>
+        <p>
+          To style static web pages, focus on these essential CSS concepts:
+        </p>
+        <ul style={styles.list}>
+          <li>
+            <strong>Selectors</strong>: Target HTML elements to apply styles, using tag names, classes, or IDs.
+            <br />
+            <code>
+              {`h1 { color: blue; }
+.class { font-size: 16px; }`}
+            </code>
+          </li>
+          <li>
+            <strong>Properties and Values</strong>: Define styles like color, size, or spacing.
+            <br />
+            <code>{`p { margin: 10px; background-color: #f0f0f0; }`}</code>
+          </li>
+          <li>
+            <strong>Box Model</strong>: Every element is a box with content, padding, border, and margin.
+            <br />
+            <code>{`div { padding: 15px; border: 1px solid black; }`}</code>
+          </li>
+          <li>
+            <strong>Layout</strong>: Use <code>display</code>, <code>float</code>, or <code>position</code> to arrange elements.
+            <br />
+            <code>{`.container { display: flex; justify-content: center; }`}</code>
+          </li>
+          <li>
+            <strong>Cascading</strong>: Styles are applied based on specificity and order, with later or more specific rules taking precedence.
+            <br />
+            <code>
+              {`p { color: red; }
+p.special { color: blue; }`}
+            </code>
+          </li>
         </ul>
       </section>
 
       <section style={styles.section}>
-        <h2>2. CSS in Modern Frameworks</h2>
-        <ul>
-          <li><strong>React:</strong> Use inline styles, CSS Modules, styled-components, or Tailwind. Components encapsulate logic and style.</li>
-          <li><strong>Angular:</strong> Supports scoped styles with native Shadow DOM emulation. Sass and global theming are common.</li>
-          <li><strong>Vue:</strong> Uses <code>&lt;style scoped&gt;</code> for component-specific styling. Works well with Tailwind and preprocessors.</li>
-          <li><strong>Svelte:</strong> Styles are scoped by default. Supports nesting and reactivity-friendly style updates.</li>
-          <li><strong>Tailwind CSS:</strong> A utility-first approach compatible with all frameworks. Excellent for AI-paired design workflows.</li>
+        <h2>Commonly Used CSS Properties</h2>
+        <p>
+          The following table lists frequently used CSS properties for styling static web pages, their purpose, and examples.
+        </p>
+        <table style={styles.table}>
+          <thead>
+            <tr>
+              <th style={styles.th}>Property</th>
+              <th style={styles.th}>Purpose</th>
+              <th style={styles.th}>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={styles.td}><code>color</code></td>
+              <td style={styles.td}>Sets the text color</td>
+              <td style={styles.td}><code>color: #333;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>font-size</code></td>
+              <td style={styles.td}>Sets the size of text</td>
+              <td style={styles.td}><code>font-size: 16px;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>font-family</code></td>
+              <td style={styles.td}>Specifies the font for text</td>
+              <td style={styles.td}><code>font-family: Arial, sans-serif;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>margin</code></td>
+              <td style={styles.td}>Sets the outer spacing around an element</td>
+              <td style={styles.td}><code>margin: 10px;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>padding</code></td>
+              <td style={styles.td}>Sets the inner spacing within an element</td>
+              <td style={styles.td}><code>padding: 15px;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>border</code></td>
+              <td style={styles.td}>Defines a border around an element</td>
+              <td style={styles.td}><code>border: 1px solid black;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>background-color</code></td>
+              <td style={styles.td}>Sets the background color</td>
+              <td style={styles.td}><code>background-color: #f0f0f0;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>display</code></td>
+              <td style={styles.td}>Controls the layout type (e.g., block, inline)</td>
+              <td style={styles.td}><code>display: flex;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>width</code></td>
+              <td style={styles.td}>Sets the width of an element</td>
+              <td style={styles.td}><code>width: 100%;</code></td>
+            </tr>
+            <tr>
+              <td style={styles.td}><code>text-align</code></td>
+              <td style={styles.td}>Aligns text horizontally</td>
+              <td style={styles.td}><code>text-align: center;</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section style={styles.section}>
+        <h2>Why Learn CSS?</h2>
+        <p>
+          Learning CSS enables you to:
+        </p>
+        <ul style={styles.list}>
+          <li>Style your website to make it visually appealing and user-friendly.</li>
+          <li>Control layout and presentation for better user experiences.</li>
+          <li>Work with HTML to create well-designed static pages.</li>
+          <li>Prepare for advanced tools like React’s inline styles or frameworks like Tailwind CSS.</li>
         </ul>
       </section>
 
       <section style={styles.section}>
-        <h2>3. Working with CSS in AI-Enhanced Environments</h2>
-        <ul>
-          <li><strong>Prompt Engineering for Style:</strong> When using AI tools (e.g., ChatGPT, GitHub Copilot, Figma AI), know how to describe layout, spacing, and theme goals clearly.</li>
-          <li><strong>Design-to-Code Translation:</strong> Tools like Figma AI and Locofy.ai can auto-generate CSS or Tailwind classes. Understanding utility classes helps guide better results.</li>
-          <li><strong>AI-Readable Code:</strong> Clean, consistent class names (BEM, Atomic CSS) improve results from AI refactoring or conversion tools.</li>
-          <li><strong>AI-Powered Testing:</strong> Visual regression tools (like Percy or Chromatic) can use AI to detect UI changes and flag CSS bugs.</li>
-          <li><strong>AI Style Tokens:</strong> Use tokenized design systems (color, spacing, typography) so that AI agents can make consistent styling decisions across multiple UIs.</li>
-        </ul>
-      </section>
-
-      <section style={styles.section}>
-        <h2>4. Tips for Scaling CSS in Large Apps</h2>
-        <ul>
-          <li>Use component libraries like Material UI or Chakra UI that already include themeable, accessible styles.</li>
-          <li>Define design tokens in JSON or CSS variables and share them across teams (design, dev, AI agents).</li>
-          <li>Use linters, PostCSS, and build tools to auto-prefix, minify, and optimize styles at scale.</li>
-          <li>Use code comments to explain design intent when collaborating with AI pair programmers.</li>
-        </ul>
+        <h2>Resources for Learning CSS</h2>
+        <p>
+          Explore these resources to deepen your CSS knowledge:
+        </p>
+        <table style={styles.table}>
+          <thead>
+            <tr>
+              <th style={styles.th}>Resource</th>
+              <th style={styles.th}>Link</th>
+              <th style={styles.th}>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={styles.td}>MDN Web Docs: CSS Basics</td>
+              <td style={styles.td}><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noopener noreferrer">Visit</a></td>
+              <td style={styles.td}>A beginner-friendly guide to CSS properties and selectors.</td>
+            </tr>
+            <tr>
+              <td style={styles.td}>W3Schools CSS Tutorial</td>
+              <td style={styles.td}><a href="https://www.w3schools.com/css/" target="_blank" rel="noopener noreferrer">Visit</a></td>
+              <td style={styles.td}>Interactive tutorials with examples for CSS styling.</td>
+            </tr>
+            <tr>
+              <td style={styles.td}>freeCodeCamp CSS Course</td>
+              <td style={styles.td}><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener noreferrer">Visit</a></td>
+              <td style={styles.td}>Free course covering CSS and responsive design.</td>
+            </tr>
+            <tr>
+              <td style={styles.td}>CSS-Tricks</td>
+              <td style={styles.td}><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">Visit</a></td>
+              <td style={styles.td}>Articles and guides on CSS techniques and best practices.</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
   );
@@ -80,6 +226,26 @@ const styles = {
     borderRadius: '8px',
     boxShadow: '0 2px 6px rgba(0,0,0,0.05)',
   },
+  list: {
+    listStyleType: 'disc',
+    paddingLeft: '1.5rem',
+  },
+  table: {
+    width: '100%',
+    borderCollapse: 'collapse',
+    marginTop: '1rem',
+  },
+  th: {
+    border: '1px solid #ddd',
+    padding: '0.75rem',
+    backgroundColor: '#f1f5f9',
+    textAlign: 'left',
+    fontWeight: 'bold',
+  },
+  td: {
+    border: '1px solid #ddd',
+    padding: '0.75rem',
+  },
 };
 
-export default CSSPage;
+export default CssPage;
