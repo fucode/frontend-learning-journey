@@ -7,7 +7,7 @@ function Home() {
     <main style={styles.main}>
       <h1 style={styles.title}>Welcome to My Front-End Learning Journey</h1>
       <p style={styles.subtitle}>
-        Explore the topics below to see my progress learning HTML, CSS, JavaScript, React, and Material UI.
+      I built this React web page to document my personal journey in learning Front-End Development. While AI has made coding more accessible, creating well-structured and visually appealing web applications still requires strong technical and design skills.
       </p>
 
       <div style={styles.cardContainer}>
