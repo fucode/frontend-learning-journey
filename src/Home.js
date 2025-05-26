@@ -26,6 +26,11 @@ function Home() {
           <p>Add interactivity with JavaScript.</p>
         </Link>
 
+        <Link to="/js-playground" style={styles.card}>
+          <h2>JavaScript Playground</h2>
+          <p>Simple JavaScript Applications</p>
+        </Link>
+
         <Link to="/react" style={styles.card}>
           <h2>React</h2>
           <p>Build powerful UIs with React.</p>

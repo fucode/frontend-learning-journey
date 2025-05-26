@@ -5,8 +5,11 @@ import Home from './Home';
 import HtmlPage from './HtmlPage';
 import CssPage from './CssPage';
 import JavascriptPage from './JavascriptPage';
+import JSPlayground from './JSPlayground';
 import ReactPage from './ReactPage';
 import MaterialPage from './MaterialPage'; 
+
+
 
 function App() {
   return (
@@ -19,6 +22,8 @@ function App() {
         <Route path="/javascript" element={<JavascriptPage />} />
         <Route path="/react" element={<ReactPage />} />
         <Route path="/material" element={<MaterialPage />} /> {/* ✅ Add this line */}
+        <Route path="/js-playground" element={<JSPlayground />} />
+
       </Routes>
     </Router>
   );
