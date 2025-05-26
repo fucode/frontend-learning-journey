@@ -10,12 +10,27 @@ function Home() {
         Explore the topics below to see my progress learning HTML, CSS, JavaScript, and React.
       </p>
 
-      <nav className="nav">
-        <Link to="/html">HTML</Link>
-        <Link to="/css">CSS</Link>
-        <Link to="/javascript">JavaScript</Link>
-        <Link to="/react">React</Link>
-      </nav>
+      <div style={styles.cardContainer}>
+        <Link to="/html" style={styles.card}>
+          <h2>HTML</h2>
+          <p>Learn the building blocks of the web with HTML.</p>
+        </Link>
+
+        <Link to="/css" style={styles.card}>
+          <h2>CSS</h2>
+          <p>Style your web pages with CSS.</p>
+        </Link>
+
+        <Link to="/javascript" style={styles.card}>
+          <h2>JavaScript</h2>
+          <p>Add interactivity using JavaScript.</p>
+        </Link>
+
+        <Link to="/react" style={styles.card}>
+          <h2>React</h2>
+          <p>Build powerful UIs with React.</p>
+        </Link>
+      </div>
     </main>
   );
 }
@@ -23,7 +38,7 @@ function Home() {
 const styles = {
   main: {
     textAlign: 'center',
-    maxWidth: '600px',
+    maxWidth: '800px',
     margin: '3rem auto',
     fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
   },
@@ -37,6 +52,25 @@ const styles = {
     marginBottom: '2rem',
     color: '#555',
   },
+  cardContainer: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+    gap: '1.5rem',
+  },
+  card: {
+    display: 'block',
+    padding: '1.5rem',
+    backgroundColor: '#f8f9fa',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    color: '#333',
+    textDecoration: 'none',
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+  },
+  cardHover: {
+    transform: 'translateY(-5px)',
+    boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
+  }
 };
 
 export default Home;
