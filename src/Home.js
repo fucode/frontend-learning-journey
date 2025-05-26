@@ -10,7 +10,12 @@ function Home() {
         Explore the topics below to see my progress learning HTML, CSS, JavaScript, and React.
       </p>
 
-
+      <nav className="nav">
+        <Link to="/html">HTML</Link>
+        <Link to="/css">CSS</Link>
+        <Link to="/javascript">JavaScript</Link>
+        <Link to="/react">React</Link>
+      </nav>
     </main>
   );
 }
